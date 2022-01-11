@@ -32,6 +32,15 @@
 				width:100%;
 				margin-bottom:10%;
 			}
+			#adventureGif{
+				height:250px;
+				background-image:url("images/adventureAtari.gif");
+				background-repeat:no-repeat;
+				width:100%;
+				margin-bottom:10%;
+				display:none;
+				margin-right:2%;
+			}
 			#header{
 				background-image:none;
 				background-color:#E4BE9E;
@@ -105,9 +114,20 @@
 			@media (max-width: 670px){
 				h1{margin-top:100px;}
 			}
-			@media (max-width: 362px){
+			@media(max-width: 450px)
+			{
+				#gifHeader{display:none;}
+				#adventureGif{display:block; margin-left:13%;}
+			}
+			@media (max-width: 390px){
 				h1{margin-top:150px;}
-				#gifHeader{visibility: hidden}
+				#gifHeader{display:none;}
+				#adventureGif{display:block; margin-left:8%;}
+			}
+			@media (max-width: 370px){
+				h1{margin-top:150px;}
+				#gifHeader{display:none;}
+				#adventureGif{display:block; margin-left:5%;}
 			}
 		</style>
 	</head>
@@ -181,6 +201,7 @@
             	<video autoplay loop muted src="outlaw.mp4">
         	</div>
 	    </div>
+	    <div id="adventureGif"></div>
 	    <div id="footer">
 			<br>
 			January 2022
