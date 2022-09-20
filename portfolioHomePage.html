@@ -67,6 +67,7 @@
 				display:flex;
 				justify-content:center;
 				background-color:#FFFFFF;
+				padding-bottom: 30px;
 
 			}
 			h1{
@@ -79,6 +80,9 @@
 				padding-bottom:30px;
 				color:#331E38;
 				font-size:2.1em;
+			}
+			video{
+				padding-bottom:30px;
 			}
 			.noTextDecorBlueHover{
 				text-decoration:none;
@@ -114,6 +118,11 @@
 				max-width:200px;
 				height:auto;
 			}
+			.gifSize
+			{
+				max-width:512px;
+				height:auto;
+			}
 			.center-Description{
 				display:flex;
 				justify-content: center;
@@ -135,6 +144,8 @@
 				h1{margin-top:60px; font-size:2.9em; font-weight:500;}
 				#about-description{width:80%; margin-left:10%;}
 				.bullet-row > p{ font-size:1.0em; padding-right:10px;}
+				video{width:90%;}
+				.gifSize{width: 70%}
 			}
 		</style>
 	</head>
@@ -149,7 +160,7 @@
 	      			<ul class="nav nav-pills">
 			        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 			        <li class="nav-item"><a href="portfolioHomePage.html"  class="nav-link active" aria-current="page">Portfolio</a></li>
-			        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+			       <!-- <li class="nav-item"><a href="about.html" class="nav-link">About</a></li> -->
 			        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	      		</ul>
 	    		</header>
@@ -159,17 +170,53 @@
 	    	<h1><strong>Personal Projects</strong></h1>
 	    	<div class="clearBoth"></div>
 	    	<div class="center-Description">
-	    		<p>Below are personal, club, and school projects. Click on a technology to be taken to projects that use it, or scroll to learn more.</p>
+	    		<p>Below are personal, club, and school projects. Click on a technology or skill to be taken to projects that use it, or scroll to learn more.</p>
 	    	</div>
 	    </div>
 	    <div class="clearBoth"></div>
+		<div class="container">
+			<div id="secondSection">
+	    		<div id="secondSectionContent">
+					<video width="600" height="450" controls>
+						<source src="itp485Engine.mp4" type="video/mp4">
+					  Your browser does not support the video tag.
+					  </video>
+					<h2><strong>Custom Game Engine</strong></h2>
+					<div id="about-description">
+	    				<p>For USC's undergrad game engines course, ITP485, I created a custom game engine using DirectX11, hlsl shaders, 
+							multi-threading, and developed a pipeline to load in assets from Blender. The engine also 
+							features 3D collision detections, skeletal animation programming, a camera with 6 degrees of
+							freedom, normal mapping, the usage of multiple render targets, mipmapping, and billboarding. Shaders 
+							written for it include Valve's Half Lambert shader, Phong, diffuse, specular, a toon shader, and a skinned one to 
+							allow skeletons to be textured. You can check the code for it <a class="noTextDecorBlueHover"href="https://uscband.usc.edu"target="_blank">here</a>.</p>
+	    			</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="purpleBackground">
+			<div id="firstSection">
+				<div id="firstSectionContent">
+					<div class="grid-row">
+						<img src="images/drumify.gif" class="gifSize" alt="A React UI showing a keyboard and 2 measures are recorded. Tensorflow's Magenta is contacted on the side.">
+					</div>
+					<h2><strong>Robot Rock</strong></h2>
+					<div id="about-description">
+						Created an automatic drumming bot with 4 other <a class="noTextDecorPurpleHover" href="https://viterbimakers.usc.edu/" target="_blank" >Makers</a>. Developed a React UI to control 
+						the solenoids being powered by an Arduino Mega. Using signal processing in Python with SciPy and PyAudio, DrumBot can beat-detect surrounding instruments in real-time. 
+						TensorFlow's GrooVAE model are inputted the listened melody which allows DrumBot to play a beat to it. By developing a multi-threaded Python core, DrumBot can also translate 
+						into sheet music its performed beat in near constant time
+					</div>
+					<p></p>
+				</div>
+			</div>
+		</div>
 	    <div class="container">
 	    	<div id="secondSection">
 	    		<div id="secondSectionContent">
 	    			<h2><strong>About</strong></h2>
 	    			<div id="about-description">
-	    				<p>I am a junior studying computer science at the University of Southern California. My interests are in video game programming, embedded systems, and fullstack development. The embedded systems club Makers, USC's Formula Electric race team, and CAIS++ are the clubs I am active in. I am formerly <a class="noTextDecorBlueHover"href="https://uscband.usc.edu"target="_blank">uscband.usc.edu</a>'s webmaster.</p>
-	    				<p>My coursework includes Data Structures, Algorithms, Operating Systems, Intro to AI, Video Game Programming, Software Engineering, Intro to Embedded Systems, Computer Architecture, Game Engines, Calc 3, and Linear Algebra.</p>
+	    				<p>I am a senior and grad student studying computer science at the University of Southern California. My interests are in game engines, embedded systems, and creative technologies. The embedded systems club Makers, USC's Formula Electric race team, and CAIS++ are the clubs I am active in. I am formerly <a class="noTextDecorBlueHover"href="https://uscband.usc.edu"target="_blank">uscband.usc.edu</a>'s webmaster.</p>
+	    				<p>My coursework includes Data Structures, Algorithms, Operating Systems, Intro to AI, Gameplay Programming, Unreal Gameplay and Networking Programming, Software Engineering, Intro to Embedded Systems, Computer Architecture, Game Engines, Calc 3, and Linear Algebra.</p>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -180,7 +227,7 @@
 					<h2><strong>Technologies</strong></h2>
 					<div class="bullet-row">
 						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p> C++, <a class="noTextDecorPurpleHover" href="videogameP.html" target="_blank" >Video Game Programming using the SDL API</a></p>
+						<p> C++, <!-- <a class="noTextDecorPurpleHover" href="videogameP.html" target="_blank" >-->Video Game Programming using the SDL API</a></p>
 					</div>
 					<div class="clearBoth"></div>
 					<div class="bullet-row">
