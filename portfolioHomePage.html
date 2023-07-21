@@ -9,6 +9,7 @@
 		<meta charset="UTF-8">
 		<style>
 			#header{
+
 				background-image:none;
 				padding-top:100px;
 				font-size:120%;
@@ -21,11 +22,27 @@
 				padding-bottom:10px;
 				color:#331E38;
 			}
-			#secondSection{
+			#tanSection{
 				padding-top:30px;
 				text-align:center;
 				padding-bottom:10px;
-				width:auto;
+				/* width:auto; */
+				position:relative;
+				background-color:#FFE7C2;
+			}
+			#tanSectionContent{
+				padding-top:30px;
+				text-align:center;
+				padding-bottom:30px;
+				/* width:auto; */
+				position:relative;
+				color:#70A0AF;
+			}
+			#secondSection{
+				padding-top:30px;
+				text-align:center;
+				padding-bottom:30px;
+				/* width:auto; */
 				position:relative;
 				background-color:#FFFFFF;
 
@@ -46,11 +63,29 @@
 			#about-description > p{
 				text-align:left;
 			}
+			#expProj-description{
+				font-size:1em;
+				float:left;
+				text-align:left;
+				width:100%;
+				display:flex;
+				flex-direction:row;
+			}
+			#expProj-description > p{
+				text-align:left;
+				max-width:200px;
+				
+			}
 			.center-Description > p{
 				color:#70A0AF;
-				width:60%;
-				padding-top:2%;
+				/* width:60%; */
+				padding-top:0px;
+				/* padding-left: 20%; */
+				/* padding-right: 20%; */
 				clear:both;
+				font-size:0.85em;
+				margin-bottom:0px;
+				order:2;
 
 			}
 			.bullet-row > p{
@@ -66,20 +101,21 @@
 				max-width:100%;
 				display:flex;
 				justify-content:center;
-				background-color:#FFFFFF;
+				/* background-color:#FFFFFF; */
 				padding-bottom: 30px;
 
 			}
 			h1{
-				margin-top:30px;
-				font-size:4.9em;
+				margin-top:15px;
+				font-size:3.5em;
 				color:#70A0AF;
 				width:100%;
+				margin-bottom:0;
 			}
 			h2{
 				padding-bottom:30px;
 				color:#331E38;
-				font-size:2.1em;
+				font-size:1.7em;
 			}
 			video{
 				padding-bottom:30px;
@@ -91,6 +127,16 @@
 			.noTextDecorPurpleHover{
 				text-decoration:none;
 				color:#331E38;
+			}
+			.underlineTextBlue
+			{
+				text-decoration: underline;
+				color:#70A0AF;
+			}
+			.underline
+			{
+				text-decoration: underline;
+				color:black;
 			}
 			body{
 				background-color:#FFE7C2;
@@ -110,6 +156,37 @@
 				justify-content: center;
 				margin-top:10px;
 			}
+			.portfolioPhoto
+			{
+				max-width: 650px;
+				height:auto;
+				order:1;
+			}
+			.portfolioPhoto-Container
+			{
+
+			}
+			.photo-Container{
+				width:320px;
+				max-height:160px;
+				
+			}
+			.photoSquare-Container{
+				width:240px;
+				max-height:240px;
+				
+			}
+			.descrip-Container{
+				width:520px;
+				height:160px;
+				padding-right:30px;
+				display:flex;
+				flex-direction:column;
+				padding-left:10px;
+			}
+			.smallerLineHeight{
+				line-height: 0.7;
+			}
 			.check-icon{
 				width:auto;
 				max-height:25px;
@@ -126,21 +203,111 @@
 			.center-Description{
 				display:flex;
 				justify-content: center;
+				flex-direction:row;
+				align-items: center;
+				padding-left:10px;
+				max-height: 400px;
+				padding-right: 20px;
+			}
+			.text-Container
+			{
+				color:#70A0AF;
+				/* width:60%; */
+				padding-top:0px;
+				/* padding-left: 20%; */
+				/* padding-right: 20%; */
+				clear:both;
+				font-size:0.9em;
+				padding-right:60px;
+				order:2;
+			}
+			.contact-Container
+			{
+				align-items: center;
+				color:black;
+			}
+			.photoDescription-Container
+			{
+				display:flex;
+			}
+			.listContainer
+			{
+
+			}
+			.bullet-list
+			{
+				padding: 0;
+				list-style-type:none;
+			}
+			.bullet-list li {
+				font-size:1em;
+				float:left;
+				text-align:left;
+				width:60%;
+				margin-left:20%;
 			}
 			#purpleBackground{
 				background-color:#C8BFE7;
 			}
 			#tanBackground{
-				background-color: #F4E8C1;
+				background-color: #FFE7C2;
 			}
 			#justify-Start{
 				justify-content:flex-start;
+			}
+			#extraPadding{
+				padding-bottom:25px;
+			}
+			#engineFooter{
+				padding-bottom:50px;
+			}
+			@media(max-width: 1170px) and (max-height: 960px)
+			{
+				.text-Container{font-size:0.7em;}
+				.portfolioPhoto{max-width: 500px;}
+			}
+			@media (max-width: 900px)
+			{
+				.portfolioPhoto{max-width: 500px;}
+				.center-Description{max-height: 500px; }
+				.text-Container{font-size:0.7em;}
+				.photo-Container{width:250px; height:auto;}
+			}
+			@media(max-width: 820px) and (max-height: 900px)
+			{
+				.text-Container{font-size:0.6em;}
+				.portfolioPhoto{max-width: 500px; height:auto;}
+				.center-Description{max-height: 560px; }
+				.photo-Container{width:250px; height:125px; margin:auto; }
+				#expProj-description{flex-direction:column;align-items:center; width:100%;}
+				.photoDescription-Container{display:block; font-size:0.8em;}
+				.descrip-Container{padding-top:20px;}
+			}
+			@media(max-width: 800px) and (max-height: 950px) /* Single Col layout */
+			{
+				.center-Description{max-height: 560px; flex-direction: column; padding-right: 0px; padding-left:20px;}
+				.portfolioPhoto{max-width: 500px; max-height:300px; padding-top:10px;}
+				.portfolioPhoto-Container{width:100%;}
+				.text-Container{font-size:0.8em;}
+				h1{padding-bottom:20px}
+				.contact-Container{font-size:0.8em; padding-top:20px;}
+				#expProj-description{flex-direction:column;align-items:center; width:100%;}
+				.photoDescription-Container{display:block; font-size:0.8em;}
+				.descrip-Container{padding-top:20px; padding-right:10px;}
+				.photo-Container{width:250px; height:125px; margin:auto; }
+				.smallerLineHeight{line-height: 1.0;}
 			}
 			@media (max-width: 676px)
 			{
 				h1{margin-top:60px; font-weight:500;}
 				#about-description{width:80%; margin-left:10%;}
 				h2{font-weight:500;}
+				.center-Description{height:auto;}
+				.text-Container{font-size:0.7em;}
+				.descrip-Container{margin-left:5%; margin-right:7%; width:auto; height:auto;}
+				#engineFooter{padding-bottom: 0px;}
+				#about-description{font-size:0.8em;}
+				
 			}
 			@media (max-width: 640px)
 			{
@@ -149,6 +316,11 @@
 				.bullet-row > p{ font-size:1.0em; padding-right:10px;}
 				video{width:90%;}
 				.gifSize{width: 70%}
+				.text-Container{font-size:0.7em; margin:auto; padding-right:0px;}
+				.text-Container > p{margin:auto;}
+				.portfolioPhoto-Container{width:auto;}
+				.center-Description{height:auto;}
+
 			}
 		</style>
 	</head>
@@ -170,35 +342,263 @@
 	    	</div>
 	    <div class="clearBoth"></div>
 	    <div id="header">
-	    	<h1><strong>Personal Projects</strong></h1>
+	    	<h1><strong>Portfolio</strong></h1>
 	    	<div class="clearBoth"></div>
 	    	<div class="center-Description">
-	    		<p>Below are personal, club, and school projects. Click on a technology or skill to be taken to projects that use it, or scroll to learn more.</p>
+				<div class="portfolioPhoto-Container">
+					<img src="images/MeganGraduatedCircleCropped.png" class="portfolioPhoto" alt="Megan wearing her undergraduate USC sash and orange master's hood with a Fight On! peace sign">
+				</div>
+				<div class="text-Container">
+					<p>My name is Megan Friedenberg. Currently, I'm a tools intern in tech art within the engine department at
+						<a class="underlineTextBlue"href="https://insomniac.games/"target="_blank">Insomniac Games</a> in Burbank, CA.
+					</p>
+					<div class="clearBoth"></div>
+					<p>
+						I am graduating in August 2023 with a master's degree in <a class="underlineTextBlue"href="https://www.cs.usc.edu/"target="_blank">Computer Science</a>
+						from <a class="underlineTextBlue"href="https://www.usc.edu/"target="_blank">University of Southern California</a>. This past December 2022, I graduated with a bachelor's in Computer Science, 
+						also from USC, and I've been lucky to have been advised by Matthew Whiting for both degrees. 
+					</p>
+					<p>
+						My interests lie in engine programming, including but not limited to real-time rendering, animation programming, tooling, 
+						VR/AR, and embedded systems. I've completed two engine tooling internships at Disney Media on the real-time team.
+					</p>
+				</div>
 	    	</div>
+			<div class="clearBoth"></div>
+			<div class="contact-Container">
+				<p><a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Email (mfrieden@usc.edu)</a>
+					 / <a class="underline"href="https://www.linkedin.com/in/meganfriedenberg/"target="_blank">LinkedIn</a>
+					 / <a class="underline"href="https://github.com/meganfriedenberg"target="_blank">GitHub</a>
+					</p>
+			</div>
 	    </div>
 	    <div class="clearBoth"></div>
 		<div class="container">
 			<div id="secondSection">
 	    		<div id="secondSectionContent">
-					<video width="600" height="450" controls>
-						<source src="itp485Engine.mp4" type="video/mp4">
-					  Your browser does not support the video tag.
-					  </video>
-					<h2><strong>Custom Game Engine</strong></h2>
+					<h2><strong>News</strong></h2>
 					<div id="about-description">
-	    				<p>For USC's undergrad game engines course, ITP485, I created a custom game engine using DirectX11, hlsl shaders, 
-							multi-threading, and developed a pipeline to load in assets from Blender. The engine also 
-							features 3D collision detections, skeletal animation programming, a camera with 6 degrees of
-							freedom, normal mapping, the usage of multiple render targets, mipmapping, and billboarding. Shaders 
-							written for it include Valve's Half Lambert shader, Phong, diffuse, specular, a toon shader, and a skinned one to 
-							allow skeletons to be textured. You can check the code for it <a class="noTextDecorBlueHover"href="https://www.dropbox.com/sh/meuxtwl2upxu5ml/AACNANqoGhDcLkft01gzye-za?dl=0"target="_blank">here</a>.</p>
+						<ul class="bullet-list">
+							<li>● [2023-08] Graduate master's CS oh yay!</li>
+							<li>● [2023-06] Start interning at Insomniac Games</li>
+							<li>● [2023-01] Bachelor's CS degree is conferred</li>
+							<li>● [2022-12] Big City Greens' Unreal holiday special airs</li>
+							<li>● [2022-05] Start interning at Disney Media on the real-time Unreal team</li>
+						</ul>
 	    			</div>
 				</div>
 			</div>
 		</div>
+		<div class="clearBoth"></div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<h2><strong>Experience</strong></h2>
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/insomniac-logo2.jpg"class="photo-Container" alt="Insomniac Games' logo">
+							</div>
+							<div class="descrip-Container">
+								<div class="smallerLineHeight">
+									<p><strong>Insomniac Games | Technical Art Intern</strong></p>
+									<p>June 2023 - Present (Managed by <a class="underline"href="https://www.linkedin.com/in/fitzymj/"target="_blank">Mike Fitzgerald</a>)</p>
+								</div>
+									<p>Expanding and refactoring tech anim tooling.</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/DMED_logo.png"class="photo-Container" alt="Disney Media Entertainment Distribution logo">
+							</div>
+							<div class="descrip-Container">
+								<div class="smallerLineHeight">
+									<p><strong>Disney | Real-time Developer Intern</strong></p>
+									<p>May 2022 - December 2022 (Managed by <a class="underline"href="https://www.linkedin.com/in/evan-binder/"target="_blank">Evan Binder</a>)</p>
+								</div>
+								<p>Developed tools - custom FBX exporter and shot creator - to support content creation pipelines in Unreal such as real-time animation, sports visualization, and motion capture.</p>
+								<p><a class="underline"href="https://www.imdb.com/name/nm14718895/"target="_blank">Credited</a> on Big City Greens' Virtually Christmas special.</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div id="extraPadding">
+		</div>
+		<div class="clearBoth"></div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<h2><strong>Engines / Rendering </strong></h2>
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/deferredrenderpass.gif"class="photo-Container" alt="A gif showing different passes of a deferred renderer with the final showing rainbow orbs.">
+							</div>
+							<div class="descrip-Container">
+								<div class="smallerLineHeight">
+									<p><strong>Deferred Lighting+Rendering | DX12 Directed Research </strong></p>
+									<p>Dec. 2022 | <a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Contact for code.</a></p>
+								</div>
+								<p>Developed a deferred rendering with deferred lighting for senior year directed research.</p>
+								<p>Depth, normals, specular are in their own render targets. One pass per light with a bloom mask.</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div id="extraPadding">
+		</div>
+		<div class="clearBoth"></div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/Navmesh.gif"class="photo-Container" alt="A gif showing a navmesh being used by soliders. More than 5 soldiers are running towards the player and are showing pathing algorithms.">
+							</div>
+							<div class="descrip-Container">
+								<div class="smallerLineHeight">
+									<p><strong>Prime Engine Development </strong></p>
+									<p>Jan. 2023 - May 2023 | <a class="underline"href="https://github.com/meganfriedenberg/NavmeshMilestoneCSCI522"target="_blank">code.</a></p>
+								</div>
+								<p><a class="underline"href="https://sites.google.com/site/artemscode/primeengine/documentation"target="_blank">Prime Engine</a> is a low-level game engine made by 
+								<a class="underline"href="https://viterbi.usc.edu/directory/faculty/Kovalovs/Artjoms"target="_blank">Artjoms Kovalovs</a>,
+									where I expanded and implemented several systems (physics, animation) and a full navmesh system to simulate crowds.</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div class="clearBoth"></div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/485engine.gif"class="photo-Container" alt="A player is jumping between 4 different platforms
+								 to showcase programmed graphics, rendering, and animation.">
+							</div>
+							<div class="descrip-Container">
+								<div class="smallerLineHeight">
+									<p><strong>Custom Game Engine </strong></p>
+									<p>Jan. 2022 - May 2022 | <a class="underline"href="https://www.dropbox.com/sh/meuxtwl2upxu5ml/AACNANqoGhDcLkft01gzye-za?dl=0"target="_blank">code.</a></p>
+								</div>
+								<p>Developed using DirectX11/hlsl, multi-threading, and an asset pipeline from Blender. 
+									It also features 3D collision detection, skeletal animation, normal mapping, 
+									multiple render targets, mipmapping, and billboarding. Shaders include Valve's Half Lambert, bloom, a toon shader, and skinning.
+								</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div id="extraPadding">
+		</div>
+		<div class="clearBoth"></div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/networkedUnreal.gif"class="photo-Container" alt="A gif showing two screens side by side of a first person shooter, where the left player is fighting against the right player.">
+							</div>
+							<div class="descrip-Container">
+								<div class="smallerLineHeight">
+									<p><strong>Networked UE5 FPS</strong></p>
+									<p>Oct. 2022 - Dec. 2022 | <a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Contact for code.</a></p>
+								</div>
+								<p>Utilizing the Steam Developer API, this FPS can connect to other Steam clients. Players can chat and leave in-game tags that are saved as level metadata. Timed grenades can blow both players up.
+								</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div id="engineFooter">
+		</div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<h2><strong>Animation </strong></h2>
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/IKsized.gif"class="photo-Container" alt="A triangulated mesh armadillo with control handles being moved to show its limbs moving, exemplifying inverse kinematics">
+							</div>
+							<div class="descrip-Container">
+								<p><strong>Character Deformer </strong></p>
+								<p>May 2023 | <a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Contact for code.</a></p>
+								<p>Given a character skeleton and its skinning weights. This program can animate the skin mesh 
+									through forward kinematics (FK) and inverse kinematics (IK).</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div class="clearBoth"></div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/mocap.gif"class="photo-Container" alt="A gif showing two mocap models dancing, a green point model with pre-read data and a red point model showing computed values.">
+							</div>
+							<div class="descrip-Container">
+								<p><strong>Motion Capture Interpolation System </strong></p>
+								<p>Jan. 2022 - May 2022 | <a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Contact for code.</a></p>
+								<p> My implementation and evaluation of different interpolation schemes (linear vs. Bezier) to interpolate human mocap data 
+									with different representations (Euler angles vs. Quaternions).</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div class="clearBoth"></div>
+		<div class="container" >
+			<div id="tanSection">
+	    		<div id="#tanSectionContent">
+					<div id="expProj-description">
+						<div class="photoDescription-Container">
+							<div class="photo-Container">
+								<img src="images/jello.gif"class="photo-Container" alt="A jello cube bouncing around in a grid box showcasing physics.">
+							</div>
+							<div class="descrip-Container">
+								<p><strong>Jello! </strong></p>
+								<p>Jan. 2022 - May 2022 | <a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Contact for code.</a></p>
+								<p> Jello! is a physically-based simulation of a jello cube inside a cornell-box force field. It's modeled by a mass-spring system, 
+									capable of handling collisions, and rendered with OpenGL.</p>
+							</div>
+						</div>
+	    			</div>
+				</div>
+			</div> 
+		</div>
+		<div id="engineFooter">
+		</div>
 		<div class="container" id="purpleBackground">
 			<div id="firstSection">
 				<div id="firstSectionContent">
+					<h2><strong>Embedded Systems</strong></h2>
 					<div class="grid-row">
 						<img src="images/drumify.gif" class="gifSize" alt="A React UI showing a keyboard and 2 measures are recorded. Tensorflow's Magenta is contacted on the side.">
 					</div>
@@ -221,7 +621,7 @@
 					</div>
 					<h2><strong>Maya</strong></h2>
 					<div id="about-description">
-						<a class="noTextDecorPurpleHover" href="https://www.meganfriedenberg.com/maya" target="_blank" >Click here for my Maya portfolio site</a>. During my spring 2022
+						<a class="underline" href="https://www.meganfriedenberg.com/maya" target="_blank" >Click here for my Maya portfolio site</a>. During my spring 2022
 						semester at USC, I took an intro to animation, modeling, and basic rigging course in Maya. In the class I created a short film of a car race, modeled my own
 						car for it, and created all desk props in the video.
 					</div>
@@ -229,59 +629,25 @@
 				</div>
 			</div>
 		</div>
-	    <div class="container">
-	    	<div id="secondSection">
+		<div class="clearBoth"></div>
+		<div class="container">
+			<div id="secondSection">
 	    		<div id="secondSectionContent">
-	    			<h2><strong>About</strong></h2>
-	    			<div id="about-description">
-	    				<p>I am a senior and grad student studying computer science at the University of Southern California. My interests are in game engines, embedded systems, and creative technologies. The embedded systems club Makers, USC's Formula Electric race team, and CAIS++ are the clubs I am active in. I am formerly <a class="noTextDecorBlueHover"href="https://uscband.usc.edu"target="_blank">uscband.usc.edu</a>'s webmaster.</p>
-	    				<p>My coursework includes Data Structures, Algorithms, Operating Systems, Intro to AI, Gameplay Programming, Unreal Gameplay and Networking Programming, Software Engineering, Intro to Embedded Systems, Computer Architecture, Game Engines, Calc 3, and Linear Algebra.</p>
+					<h2><strong>Teaching</strong></h2>
+					<div id="about-description">
+						<ul class="bullet-list">
+							<li>● Spring 2023 ITP 485 Programming Game Engines (Teaching Assistant), taught by Matt Whiting</li>
+							<li>● Spring 2022 ITP 380 Video Game Programming (Course Producer), taught by Sanjay Madhav</li>
+							<li>● Spring 2022 ITP 116 Advanced Intro to Python (Head Course Producer), taught by Jeffrey Miller</li>
+							<li>● Fall 2021 ITP 116 Advanced Intro to Python (Designed course), taught by Jeffrey Miller</li>
+							<li>● Fall 2021 CS 102 Intro to C++ (Course Producer), taught by Mark Redekopp</li>
+						</ul>
 	    			</div>
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="container" id="purpleBackground">
-			<div id="firstSection">
-				<div id="firstSectionContent">
-					<h2><strong>Technologies</strong></h2>
-					<div class="bullet-row">
-						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p> C++, <!-- <a class="noTextDecorPurpleHover" href="videogameP.html" target="_blank" >-->Video Game Programming using the SDL API, Unreal Engine</a></p>
-					</div>
-					<div class="clearBoth"></div>
-					<div class="bullet-row">
-						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p><a class="noTextDecorPurpleHover" href="maya.html" target="_blank" >Maya, Modeling, basic animation, and rigging</a></p>
-					</div>
-					<div class="clearBoth"></div>
-					<div class="bullet-row">
-						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p> C, Embedded Systems Programming</p>
-					</div>
-					<div class="clearBoth"></div>
-					<div class="bullet-row">
-						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p> Python, Tkinter/GUIs, Embedded Systems, ML models</p>
-					</div>
-					<div class="clearBoth"></div>
-					<div class="bullet-row">
-						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p> Java, Programming, Backend and Servlets</p>
-					</div>
-					<div class="clearBoth"></div>
-					<div class="bullet-row">
-						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p> React, Node.js, Javascript</p>
-					</div>
-					<div class="bullet-row">
-						<img src="images/checkIcon.png" class="check-icon" alt="check mark icon">
-						<p> HTML/CSS, The Daily Trojan, The Spirit of Troy, THIS website!</p>
-					</div>
 				</div>
 			</div>
 		</div>
 		<br>
 		<br>
-	    <div id="footer"><br>January 2023</div>
+	    <div id="footer"><br>July 2023</div>
 	</body>
 </html>

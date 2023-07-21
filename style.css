@@ -21,12 +21,29 @@ p{
 	position:fixed;
 	z-index:1;
 }
+.mainColFlex
+{
+	display:flex;
+	flex-direction: row;
+}
+.mainLeftCol
+{
+	width:50%;
+	height:550px;
+	background-color: #F4E8C1;
+}
+.mainRightCol
+{
+	width:50%;
+	height:550px;
+	text-align:center;
+}
 #header{
-	background-image:url("images/inyoLandscape.jpg");
-	background-position:center;
+	background-image:url("images/hallwayStraightZoomed.jpg");
+	background-position:top center;
 	background-repeat:no-repeat;
 	background-size:cover;
-	height:650px;
+	height:550px;
 }
 #firstSection{
 	padding-top:30px;
@@ -68,6 +85,10 @@ p{
 .iconImg{
 	max-height:35px;
 	width:auto;
+}
+.mainImg
+{
+	max-height:550px;
 }
 .purpleHover:hover{
 	color:#706993;
