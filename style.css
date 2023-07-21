@@ -40,7 +40,7 @@ p{
 }
 #header{
 	background-image:url("images/inyoLandscape.jpg");
-	background-position:top center;
+	background-position: center;
 	background-repeat:no-repeat;
 	background-size:cover;
 	height:550px;
