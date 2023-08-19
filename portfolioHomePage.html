@@ -187,9 +187,9 @@
 			.smallerLineHeight{
 				line-height: 0.7;
 			}
-			.check-icon{
+			.img-icon{
 				width:auto;
-				max-height:25px;
+				max-height:20px;
 			}
 			.imgSize{
 				max-width:200px;
@@ -266,6 +266,13 @@
 				.text-Container{font-size:0.7em;}
 				.portfolioPhoto{max-width: 500px;}
 			}
+			@media (max-width: 1200px) and (max-height: 1180px)
+			{
+				.portfolioPhoto{max-width: 500px;}
+				.center-Description{max-height: 500px; }
+				.text-Container{font-size:0.7em;}
+				.photo-Container{width:250px; height:auto;}
+			}
 			@media (max-width: 900px)
 			{
 				.portfolioPhoto{max-width: 500px;}
@@ -273,7 +280,7 @@
 				.text-Container{font-size:0.7em;}
 				.photo-Container{width:250px; height:auto;}
 			}
-			@media(max-width: 820px) and (max-height: 900px)
+			@media(max-width: 840px) and (max-height: 900px)
 			{
 				.text-Container{font-size:0.6em;}
 				.portfolioPhoto{max-width: 500px; height:auto;}
@@ -283,7 +290,7 @@
 				.photoDescription-Container{display:block; font-size:0.8em;}
 				.descrip-Container{padding-top:20px;}
 			}
-			@media(max-width: 800px) and (max-height: 950px) /* Single Col layout */
+			@media(max-width: 830px) and (max-height: 1020px) /* Single Col layout */
 			{
 				.center-Description{max-height: max-content; flex-direction: column; padding-right: 0px; padding-left:20px;}
 				.portfolioPhoto{max-width: 500px; max-height:300px; padding-top:10px;}
@@ -294,7 +301,7 @@
 				#expProj-description{flex-direction:column;align-items:center; width:100%;}
 				.photoDescription-Container{display:block; font-size:0.8em;}
 				.descrip-Container{padding-top:20px; padding-right:10px;}
-				.photo-Container{width:250px; height:125px; margin:auto; }
+				.photo-Container{width:250px; height:auto; margin:auto; }
 				.smallerLineHeight{line-height: 1.0;}
 			}
 			@media (max-width: 676px)
@@ -357,7 +364,7 @@
 					<p>
 						I am graduating in August 2023 with a master's degree in <a class="underlineTextBlue"href="https://www.cs.usc.edu/"target="_blank">Computer Science</a>
 						from <a class="underlineTextBlue"href="https://www.usc.edu/"target="_blank">University of Southern California</a>. This past December 2022, I graduated with a bachelor's in Computer Science, 
-						also from USC, and I've been lucky to have been advised by Matthew Whiting for both degrees. 
+						also from USC, and I've been lucky to have been advised by <a class="underlineTextBlue"href="https://viterbi.usc.edu/directory/faculty/Whiting/Matthew"target="_blank">Matthew Whiting</a> for both degrees. 
 					</p>
 					<p>
 						My interests lie in engine programming, including but not limited to real-time rendering, animation programming, tooling, 
@@ -367,9 +374,12 @@
 	    	</div>
 			<div class="clearBoth"></div>
 			<div class="contact-Container">
-				<p><a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Email (mfrieden@usc.edu)</a>
-					 / <a class="underline"href="https://www.linkedin.com/in/meganfriedenberg/"target="_blank">LinkedIn</a>
-					 / <a class="underline"href="https://github.com/meganfriedenberg"target="_blank">GitHub</a>
+				<p><img src="images/mailIcon.png" class="img-icon" alt="Email icon">
+					<a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Email (mfrieden@usc.edu)</a>
+					/ <img src="images/linkedinIcon.jpg" class="img-icon" alt="LinkedIn icon">
+					<a class="underline"href="https://www.linkedin.com/in/meganfriedenberg/"target="_blank">LinkedIn</a>
+					/ <img src="images/githubIcon.png" class="img-icon" alt="GitHub icon">
+					<a class="underline"href="https://github.com/meganfriedenberg"target="_blank">GitHub</a>
 					</p>
 			</div>
 	    </div>
@@ -405,7 +415,8 @@
 									<p><strong>Insomniac Games | Technical Art Intern</strong></p>
 									<p>June 2023 - Present (Managed by <a class="underline"href="https://www.linkedin.com/in/fitzymj/"target="_blank">Mike Fitzgerald</a>)</p>
 								</div>
-									<p>Expanding and refactoring tech anim tooling.</p>
+									<p>Expanding and refactoring tech anim tooling for <a class="underline"href="https://insomniac.games/game/marvels-spider-man-2/"target="_blank">Marvel's Spider-Man 2</a> and 
+										<a class="underline"href="https://insomniac.games/game/marvels-wolverine/"target="_blank">Wolverine</a>.</p>
 							</div>
 						</div>
 	    			</div>
@@ -426,7 +437,8 @@
 									<p>May 2022 - December 2022 (Managed by <a class="underline"href="https://www.linkedin.com/in/evan-binder/"target="_blank">Evan Binder</a>)</p>
 								</div>
 								<p>Developed tools - custom FBX exporter and shot creator - to support content creation pipelines in Unreal such as real-time animation, sports visualization, and motion capture.</p>
-								<p><a class="underline"href="https://www.imdb.com/name/nm14718895/"target="_blank">Credited</a> on Big City Greens' Virtually Christmas special.</p>
+								<p><a class="underline"href="https://www.imdb.com/name/nm14718895/"target="_blank">Credited</a> on Big City Greens' Virtually Christmas 
+									<a class="underline"href="https://www.youtube.com/watch?v=rG65I6uQ2sc"target="_blank">special.</a></p>
 							</div>
 						</div>
 	    			</div>
@@ -450,7 +462,7 @@
 									<p><strong>Deferred Lighting+Rendering | DX12 Directed Research </strong></p>
 									<p>Dec. 2022 | <a class="underline"href="mailto:mfrieden@usc.edu"target="_blank">Contact for code.</a></p>
 								</div>
-								<p>Developed a deferred rendering with deferred lighting for senior year directed research.</p>
+								<p>Developed a deferred renderer with deferred lighting for senior year directed research.</p>
 								<p>Depth, normals, specular are in their own render targets. One pass per light with a bloom mask.</p>
 							</div>
 						</div>
