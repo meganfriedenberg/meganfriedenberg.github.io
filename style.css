@@ -39,7 +39,7 @@ p{
 	text-align:center;
 }
 #header{
-	background-image:url("images/inyoLandscape.jpg");
+	background-image:url("images/glacier.jpg");
 	background-position: center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -84,6 +84,11 @@ p{
 }
 .iconImg{
 	max-height:35px;
+	width:auto;
+}
+.iconImg2
+{
+	max-height:20px;
 	width:auto;
 }
 .mainImg
